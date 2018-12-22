@@ -1,23 +1,17 @@
 <?php
 
-/**
- * Start the session.
- */
+/*  Sākam sesiju-->  */
 session_start();
 
 
-/**
- * Check if the user is logged in.
- */
+/* Ja tukšs, tad met atpakaļ uz citu lapu   */
  if(empty($_SESSION['username'])) {
    header("location: register.php");
    exit();
  }
 
 
-/**
- * Print out something that only logged in users can see.
- */
+/* Ja viss strādā, tad:   */
 
 echo "Congratulations! You are logged in!<br>";
 echo $_SESSION['username'];
